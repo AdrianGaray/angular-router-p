@@ -13,6 +13,12 @@ import { ProfileComponent } from './pages/profile/profile.component';
 // generar reglas
 const routes: Routes = [
   {
+    // sea agrega la ruta por  defecto
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
     component: HomeComponent
   },
