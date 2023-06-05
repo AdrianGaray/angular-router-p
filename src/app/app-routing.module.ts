@@ -53,7 +53,13 @@ const routes: Routes = [
     },
     ]
   },
-
+  {
+    path: 'cms',
+    // vamos a importar, hacemos un arrow function () =
+    // ejecutamos nuestro import
+    // en el import llamamos a cmd.module
+    loadChildren: () => import('./cms/cms.module').then(m => m.CmsModule)
+  },
   {
     path: '**',
     component: NotFoundComponent
